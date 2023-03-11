@@ -45,7 +45,7 @@ input {
 /*
 checked
 */
-/* .meme-checked:checked  ~ .item-header{
+.meme-checked:checked  ~ .item-header{
     color: black;
 }
 .meme-checked:checked  ~ .item-header .item-icon {
@@ -54,18 +54,18 @@ checked
 .meme-checked:checked  ~ .item-img {
     height: 40%;
     width: 40%;
-} */
+}
 /*
 active
 */
-/* .item:active .item-img {
+.item:active .item-img {
     transition: all 0.2s;
     opacity: 0.5;
-} */
+}
 /*
 hover
 */
-/* @media (hover: hover) and (pointer: fine) {
+@media (hover: hover) and (pointer: fine) {
     main:hover .item-icon {
         transition: all 0.3s ease-in-out;
         opacity: 1;
@@ -77,4 +77,4 @@ hover
     .item:hover > .item-img {
         width: 40%;
     }
-} */
+}
