@@ -4,13 +4,16 @@ body {
     margin: 0;
     padding: 0;
     flex-direction: column;
-    max-width: 1000px;
+    max-width: 70vw;
     margin: 0 auto;
     background-color: #f5f5ec;
 }
+h1 {
+
+}
 main {
     color: blue;
-    font-size: 25px;
+    font-size: 1.5em;
     font-weight: bold;
 }
 input {
@@ -21,14 +24,15 @@ input {
     flex-direction: column;
     align-items: center;
     border-top: 0.01em solid #616264;
-    padding: 25px 0;
+    padding: 0.3em 0;
+    cursor: pointer;
 }
 .item-icon {
     padding: 0;
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 25px;
+    width: 1.1em;
     opacity: 0;
 }
 .item-header {
@@ -37,8 +41,13 @@ input {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    /* overflow: hidden; */
+}
+.item-header p{
+    margin: 0.2rem 0;
 }
 .item-img {
+    /* display: block; */
     width: 0%;
     height: 0%;
 }
@@ -46,20 +55,23 @@ input {
 checked
 */
 .meme-checked:checked  ~ .item-header{
+    transition: all 0.3s ease-in-out;
     color: black;
 }
 .meme-checked:checked  ~ .item-header .item-icon {
+    transition: all 0.3s ease-in-out;
     transform: rotate(45deg);
 }
 .meme-checked:checked  ~ .item-img {
-    height: 40%;
-    width: 40%;
+    transition: all 0.3s ease-in-out;
+    width: auto;
+    max-width: 90%;
 }
 /*
 active
 */
 .item:active .item-img {
-    transition: all 0.2s;
+    transition: all 0.3s;
     opacity: 0.5;
 }
 /*
@@ -75,6 +87,41 @@ hover
         color: black;
     }
     .item:hover > .item-img {
-        width: 40%;
+        width: auto;
+        transition: all 0.3s ease-in-out;
+    }
+}
+@media (min-width: 50px) {
+    h1 {
+        font-size: 2rem;
+    }
+    main {
+        font-size: 0.8em;
+    }
+
+}
+@media (min-width: 300px) {
+    h1 {
+        font-size: 2rem;
+    }
+    main {
+        font-size: 0.8em;
+    }
+
+}
+@media (min-width: 820px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+    main {
+        font-size: 1em;
+    }
+}
+@media (min-width: 1024px) {
+    h1 {
+        font-size: 3rem;
+    }
+    main {
+        font-size: 1.2em;
     }
 }
