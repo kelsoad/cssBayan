@@ -8,6 +8,9 @@ body {
     margin: 0 auto;
     background-color: #f5f5ec;
 }
+h1 {
+
+}
 main {
     color: blue;
     font-size: 1.5em;
@@ -38,11 +41,13 @@ input {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    /* overflow: hidden; */
 }
 .item-header p{
     margin: 0.2rem 0;
 }
 .item-img {
+    /* display: block; */
     width: 0%;
     height: 0%;
 }
@@ -59,8 +64,8 @@ checked
 }
 .meme-checked:checked  ~ .item-img {
     transition: all 0.3s ease-in-out;
-    height: 40%;
-    width: 40%;
+    width: auto;
+    max-width: 90%;
 }
 /*
 active
@@ -82,21 +87,41 @@ hover
         color: black;
     }
     .item:hover > .item-img {
-        width: 40%;
+        width: auto;
         transition: all 0.3s ease-in-out;
     }
 }
+@media (min-width: 50px) {
+    h1 {
+        font-size: 2rem;
+    }
+    main {
+        font-size: 0.8em;
+    }
 
+}
 @media (min-width: 300px) {
     h1 {
-
+        font-size: 2rem;
     }
+    main {
+        font-size: 0.8em;
+    }
+
 }
 @media (min-width: 820px) {
     h1 {
+        font-size: 2.5rem;
+    }
+    main {
+        font-size: 1em;
     }
 }
 @media (min-width: 1024px) {
     h1 {
+        font-size: 3rem;
+    }
+    main {
+        font-size: 1.2em;
     }
 }
